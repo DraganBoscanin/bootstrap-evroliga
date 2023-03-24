@@ -21,19 +21,27 @@
             height: 37.5rem;
             width: 100%;
         }
-        @media all and (max-width:767px) {
+        @media all and (max-width:992px) {
             #banner{
                 display: none;
             }
         }
         #image_klubova img {
-            height: 120px;
-         
+            height: 7.5rem;
+           
         
 
         }
+        #image_klubova img:hover{
+            transform: scale(1.1, 1.1);
+            box-shadow: 0.75rem 0.75rem 0.75rem black;
+            
+        }
         #mreze img {
-            height: 40px;
+            height: 2.5rem;
+        }
+        #mreze img:hover{
+            transform: scale(1.1, 1.1);
         }
         #drugi_aside h2{
             text-align: center;
@@ -50,9 +58,23 @@
 </head>
 
 <body>
+    <div class="row">
+        <div class="col-10">
     <header>
         <img src="./image/EuroLeague_logo (1).png" id="main_logo" alt="">
     </header>
+</div>
+<div class="col-lg-2">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input class="form-control  me-2 mt-4" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success mt-4" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    </div>
     <nav class="navbar navbar-expand-md bg-light">
         <div class="container-fluid">
         
@@ -78,8 +100,13 @@
             </div>
         </div>
     </nav>
+
     <div id="banner"></div>
-    <div class="container-fluid  text-center vh-60 " id="container">
+   
+    <p class="placeholder-glow">
+        <span class="placeholder col-12"></span>
+      </p>
+    <div class="container-fluid  text-center  " id="container">
         <div class="row ">
         <div class="box col align-items-center" id="box-1">
             <iframe src="https://www.youtube.com/embed/W4hLYr8BXRQ" title="YouTube video player" frameborder="0"
@@ -94,7 +121,8 @@
         <div class="box col" id="box-3"><iframe src="https://www.youtube.com/embed/rR-w04kkrK8"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe></div>
+                allowfullscreen></iframe>
+            </div>
         <div class="box col" id="box-4"><iframe src="https://www.youtube.com/embed/imwLKZBua3M"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -125,12 +153,15 @@
 
 
     </div>
+    <p class="placeholder-glow">
+        <span class="placeholder col-12"></span>
+      </p>
    
 
-    <main class="row justify-content-center ms-2 me-2 mt-5 ">
-    <section class="col-md-7" id="prvi_aside">
+    <main class="row justify-content-center ms-2 me-2 mt-4 ">
+    <section class="col-md-7  bg-light bg-gradient mb-2 me-4 border pt-2" id="prvi_aside">
       
-            <h2 class="bg-dark bg-gradient text-white">News</h2>
+            <h2 class="bg-dark bg-gradient text-danger font-monospace">News</h2>
             <p><strong>PARTIZAN RAZBIO šampiona Evrope! Crno-bela rapsodija u Istanbulu: Top 8 nikad
                     bliži</strong>
             </p>
@@ -163,18 +194,18 @@
                 zavisili od jednog igrača. Čestitke svima - kazao je Lesor.
 
                 Velika je ovo bila pobeda i u smislu pomaka na tabeli u borbi za plej-of jer je u pitanju bio
-                direktan rival za Top8.</p>
+                direktan rival za Top8.</p> 
        
             </section>
-        <aside id="drugi_aside" class="col-md-4">
-            <div class=" mb-5 "><h2 class="bg-dark bg-gradient text-white">Follow us</h2></div>
-            <div id="mreze" class="row ms-5 mb-5 ">
+        <aside id="drugi_aside" class="col-md-4 bg-light bg-gradient mb-2 border pt-2 border pt-2">
+            <div class=" mb-5 "><h2 class="bg-dark bg-gradient text-danger font-monospace">Follow us</h2></div>
+            <div id="mreze" class="row ms-5 mb-5  ">
                 <div class="col"><a  href="https://www.facebook.com" target="_blank"><img class="img-fluid" src="./image/facebook-logo-2019.svg" alt="Facebook"></a></div>
                 <div class="col"><a href="https://www.instagram.com" target="_blank"><img class="img-fluid" src="./image/instagram.svg" alt="Instagram" id="insta"></a></div>
                 <div class="col"><a href="https://www.twitter.com" target="_blank"><img class="img-fluid" src="./image/twitter-circle.svg" alt="Twiter" id="twit"></a></div>
             </div>
             <div class="row table-responsive-sm  mb-5">
-                <table class="table" id="tabela">
+                <table class="table table-dark table-hover table-sm" id="tabela">
                     <tr class="border">
                         <th>Tim</th>
                         <th>OM</th>
@@ -263,6 +294,7 @@
       
     </aside>
    </main>
+
    <footer id="contact" class="row justify-content-center text-center ">
     <div class="col-12 bg-secondary text-white"><p>My Website|&copy2023Demo</p></div>
 </footer>
